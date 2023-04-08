@@ -14,7 +14,5 @@ to another link.
 #### Basic Operations
 
 - **Insertion** - Add an element at the beginning of the list.
-- **Deletion** - Delete an element at the beginning of the list.
+- **Deletion** - Delete an element using a given index.
 - **Display** - Displaying complete list.
-- **Search** - Search an element using given key.
-- **Delete** - Delete and element using given key.
