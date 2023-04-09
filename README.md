@@ -24,3 +24,4 @@ the below image.
 - **Delete** - Delete an Node at a given position.
 - **DeleteValue** - Delete a Node that has the given value.
 - **get** - Get the data of a node at given position.
+- **(free)** - I use Free function only in C, to free the allocated memory in the program.
