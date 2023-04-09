@@ -2,10 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Node * head;
+/**
+ * main - A simple test of the linked list
+ * Return: 0
+ */
 
 int main()
 {
+    Node * head;
     Node * list = (Node *) malloc(sizeof(Node));
     list->data = 1;
     list->next = NULL;
