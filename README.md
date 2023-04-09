@@ -18,6 +18,9 @@ the below image.
 
 #### Basic Operations
 
-- **Insertion** - Add an element at the beginning of the list.
-- **Deletion** - Delete an element using a given index.
-- **Display** - Displaying complete list.
+- **Append** - Add an Node at the beginning of the list.
+- **Insert** - Add an Node at a given position position.
+- **Print** - Print the entire list to stdout.
+- **Delete** - Delete an Node at a given position.
+- **DeleteValue** - Delete a Node that has the given value.
+- **get** - Get the data of a node at given position.
