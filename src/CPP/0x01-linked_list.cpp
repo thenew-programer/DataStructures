@@ -1,47 +1,106 @@
+#include "0x01-linked_list.h"
+#include <cstdlib>
 #include <iostream>
 
-class Node {
-    public:
-        int data;
-        Node * next;
-        Node * HEAD;
-        void Insert(int x, int at)
-        {
-            Node * temp1 = new Node();
-            temp1->data = x;
-            temp1->next = NULL;
-            if (at == 1)
-            {
-                temp1->next = HEAD;
-                HEAD = temp1;
-            }
+/**
+ * All the definition of the methods of class will be here
+ */
 
-            Node * temp2 = HEAD;
-            for (int i = 0; i < at - 2; i++)
-            {
-                temp2 = temp2->next;
-            }
-            temp1->next = temp2->next;
-            temp2->next = temp1;
-        }
+using namespace std;
 
-        void Print()
-        {
-            Node * temp = HEAD;
-            
-            while (temp->next != NULL)
-            {
-                temp = temp->next;
-                std::cout << temp->data;
-            }
-        }
-};
-
-int main()
+List::List()
 {
-    Node node;
-    node.HEAD = NULL;
-    node.Insert(1, 1);
-    node.Print();
-    return (0);
+    head = NULL;
+    curr = NULL;
+    temp = NULL;
 }
+
+void List::Append(int Indata)
+{
+    nodePtr n = new Node;
+    n->next = NULL;
+    n->data = Indata;
+    if (head != NULL)
+    {
+        curr = head;
+        while (curr != NULL)
+        {
+            curr = curr->next;
+        }
+        curr->next = n;
+    }
+    else
+    {
+        head = n;
+    }
+}
+
+void List::Delete(int Deldata)
+{
+    nodePtr delPtr = NULL;
+    curr = head;
+    while (curr != NULL && curr->data != Deldata)
+    {
+        temp = curr;
+        curr = curr->next;
+    }
+    if (curr == NULL)
+    {
+        cout << Deldata << " was not here.\n";
+        delete delPtr;
+    }
+    else
+    {
+        delPtr = curr;
+        temp->next = curr->next;
+        delete delPtr;
+        cout << Deldata << " Successfully deleted\n";
+    }
+}
+
+void List::Print()
+{
+    temp = head;
+    cout << "[ ";
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << "]\n";
+}
+
+
+
+/************ Delete
+ * 1- search for the element
+ *    if the element isn't there exit and print "the element isn't there"
+ *    if the element is there 
+ *       put the addr of the next element in the element before the one we delete
+ *       delete the actual node
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
