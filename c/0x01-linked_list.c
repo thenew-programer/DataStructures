@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void Append(Node * head, int value)
+Node * Append(Node * head, int value)
 {
     Node * n = (Node *) malloc(sizeof(Node));
     Node * curr;
@@ -22,9 +22,10 @@ void Append(Node * head, int value)
     {
         head = n;
     }
+    return (head);
 }
 
-void Insert(Node * head, int index, int value)
+Node * Insert(Node * head, int index, int value)
 {
     Node * n = (Node *) malloc(sizeof(Node));
     Node * curr;
@@ -56,6 +57,7 @@ void Insert(Node * head, int index, int value)
             n->next = curr;
         }
     }
+    return (head);
 }
 
 

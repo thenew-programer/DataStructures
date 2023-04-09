@@ -10,9 +10,9 @@ typedef struct node
 
 /* Append - add a node at the end of the list
  * value: the value to append
- * Return - void
+ * Return - Node *
  */
-void Append(Node * head, int value);
+Node * Append(Node * head, int value);
 
 /* Append - Add a node at the index position
  * index - start from 0.
@@ -20,7 +20,7 @@ void Append(Node * head, int value);
  * if index > number of elements of the list,
  *   the value inserted to the end of the list.
  */
-void Insert(Node * head, int index, int value);
+Node * Insert(Node * head, int index, int value);
 
 /* get the data of the node at the index position.
  * index: the position of the node.
@@ -32,13 +32,13 @@ int  get(Node * head, int index, int fail);
 
 /* Delete - Delete a node at index position
  * index: the position of the desired node.
- * Return: Void
+ * Return: Node *
  */
 void Delete(Node * head, int index);
 
 /* DeleteNode - delete a node from the list, using the value
  * value: the value you want to delete from the list.
- * Return: Void
+ * Return: Node *
  */
 void DeleteValue(Node * head, int value);
 
