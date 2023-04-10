@@ -52,5 +52,8 @@ class List {
 
         /* Print all the list */
         void Print();
+
+        // Destructor
+        ~List();
 };
 #endif

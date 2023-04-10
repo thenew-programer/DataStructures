@@ -88,45 +88,34 @@ int List::get(int index, int fail)
 }
 
 
-void List::Delete(int index)
-{
+void List::Delete(int index) {
     nodePtr delPtr = NULL;
     curr = head;
-    for (int i = 0; (i < index) && (curr != NULL); i++)
-    {
+    for (int i = 0; (i < index) && (curr != NULL); i++) {
         temp = curr;
         curr = curr->next;
     }
-    if (curr == NULL)
-    {
+    if (curr == NULL) {
         cout << "Error: index out of bounds, node not found.\n";
         delete delPtr;
-    }
-    else
-    {
+    } else {
         delPtr = curr;
         temp->next = curr->next;
         delete delPtr;
-        cout << "Node at index "<< index << " deleted Successfully.\n";
-    }
+        cout << "Node at index "<< index << " deleted Successfully.\n"; }
 }
 
-void List::DeleteValue(int value)
-{
+void List::DeleteValue(int value) {
     nodePtr delPtr = NULL;
     curr = head;
-    while (curr != NULL && curr->data != value)
-    {
+    while (curr != NULL && curr->data != value) {
         temp = curr;
         curr = curr->next;
-    }
-    if (curr == NULL)
-    {
+    } 
+    if (curr == NULL) {
         cout << value << " was not here.\n";
         delete delPtr;
-    }
-    else
-    {
+    } else {
         delPtr = curr;
         temp->next = curr->next;
         delete delPtr;
@@ -134,16 +123,22 @@ void List::DeleteValue(int value)
     }
 }
 
-void List::Print()
-{
+void List::Print() {
     curr = head;
     cout << "[ ";
-    while (curr != NULL)
-    {
+    while (curr != NULL) {
         cout << curr->data << " ";
         curr = curr->next;
     }
     cout << "]\n";
+}
+
+void List::~List() {
+    while (head != NULL) {
+        temp = head;
+        head = head->next;
+        delete temp;
+    }
 }
 
 
