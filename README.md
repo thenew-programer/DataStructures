@@ -25,3 +25,18 @@ the below image.
 - **DeleteValue** - Delete a Node that has the given value.
 - **get** - Get the data of a node at given position.
 - **(free)** - I use Free function only in C, to free the allocated memory in the program.
+
+## Stack
+A **stack** is an **abstract data type** with a predifined capacity or size. It is a simple
+data structure that allows adding and removing elements in a particular order.
+
+![simple representation of stack](media/lifo_stack.svg.png)
+
+#### Basic Features
+- 1-Stack is an **ordered list** of similar data type.
+- 2-Stack is a **LIFO**(Last in First out) structure.
+- 3-**push()** function is used to insert new element into the stack.
+- 4-**pop()** function is used to remove an element from the stack.
+    _Both insertion and deletion are allowed only on top of the stack_
+- 5-Stack is in **Overflow** state when it is completely full, and is said in 
+  **Underflow** state if it is completely empty.
