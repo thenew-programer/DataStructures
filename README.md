@@ -30,7 +30,7 @@ the below image.
 A **stack** is an **abstract data type** with a predifined capacity or size. It is a simple
 data structure that allows adding and removing elements in a particular order.
 
-![simple representation of stack](media/lifo_stack.svg.png)
+![simple representation of stack](media/Lifo_stack.svg.png)
 
 #### Basic Features
 - 1-Stack is an **ordered list** of similar data type.
