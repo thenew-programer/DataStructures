@@ -51,7 +51,7 @@ data structure that allows adding and removing elements in a particular order.
 ## Queues
 Queue is like stack, is also an abstract data structure. The difference between queue and stack is queue is open at both its ends. Hence it follows FIFO structure, i.e. the data inserted first will accessed and removed first. The data is inserted into the queue through one end (rear) and deleted from it using other end (front).
 
-![simple representation of queue](media/)
+![simple representation of queue](media/queues.jpg)
 
 ### Basic Operations
 - **Push/Enqueue** - Add an element at the rear of the queue.
