@@ -1,5 +1,5 @@
 /**
- * Stack data type
+ * Stack data structure
  */
 
 public class StackX {
@@ -35,6 +35,12 @@ public class StackX {
 	public int top() {
 
 		return data[top];
+	}
+
+	// isEmpty method 
+	public boolean isEmpty() {
+		if (top == -1) return true;
+		else return false;
 	}
 
 }

@@ -18,5 +18,12 @@ public class Main {
 		System.out.println("value poped = " + stack.pop());
 		System.out.println("value poped = " + stack.pop());
 		System.out.println("value poped = " + stack.pop());
+		if (stack.isEmpty()) {
+			System.out.println("the stakc is empty");
+		}
+		else {
+			System.out.println("the stack is not empty");
+		}
+		
 	}
 }
