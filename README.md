@@ -40,3 +40,22 @@ data structure that allows adding and removing elements in a particular order.
     _Both insertion and deletion are allowed only on top of the stack_
 - 5-Stack is in **Overflow** state when it is completely full, and is said in 
   **Underflow** state if it is completely empty.
+
+#### Basic Operations
+- **Push** - Add an element at the top of the stack.
+- **Pop** - Remove an element from the top of the stack.
+- **Top** - Get the element at the top of the stack.
+- **isEmpty** - Check whether the stack is empty or not.
+- **Print** - Prints the stack to the stdout.
+
+## Queues
+Queue is like stack, is also an abstract data structure. The difference between queue and stack is queue is open at both its ends. Hence it follows FIFO structure, i.e. the data inserted first will accessed and removed first. The data is inserted into the queue through one end (rear) and deleted from it using other end (front).
+
+![simple representation of queue](media/)
+
+### Basic Operations
+- **Push/Enqueue** - Add an element at the rear of the queue.
+- **Pop/Dequeue** - Remove an element from the front of the queue.
+- **Top/Peek** - Get the element at the top of the queue.
+- **Print** - Prints the queue to the stdout.
+- **isEmpty** - Check whether the queue is empty or not.
