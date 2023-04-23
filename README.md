@@ -71,7 +71,7 @@ In this repo we are gonna see the BST or Binary Search Tree, is type of trees, b
 - The right subtree of a node contains only nodes with keys greater than the root node key
 - The left and right subtree each must be a binary tree.
 
-[Binary Search Tree](./media/bst.png)
+![Binary Search Tree](./media/bst.png)
 
 ### Basic Operations
 - **addNode** - Add a node to the tree.
