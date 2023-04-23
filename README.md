@@ -59,3 +59,21 @@ Queue is like stack, is also an abstract data structure. The difference between 
 - **Top/Peek** - Get the element at the top of the queue.
 - **Print** - Prints the queue to the stdout.
 - **isEmpty** - Check whether the queue is empty or not.
+
+
+## Trees
+Trees are abstract data types, that represent a hierarchical tree structured with a sef of connected nodes. Each node in the tree can be conneted to many other nodes called children, and chilren must be connected to exacltly one parent.
+
+### Binary Search Tree
+In this repo we are gonna see the BST or Binary Search Tree, is type of trees, but with different propreties.
+
+- The left subtree of a node contains only nodes with keys lesser than the root node key.
+- The right subtree of a node contains only nodes with keys greater than the root node key
+- The left and right subtree each must be a binary tree.
+
+[Binary Search Tree](./media/bst.png)
+
+### Basic Operations
+- **addNode** - Add a node to the tree.
+- **search** - Search for a node in the tree.
+- **delete** - Delete a node from a tree.*(The hardest)*
