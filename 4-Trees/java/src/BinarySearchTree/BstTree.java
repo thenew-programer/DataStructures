@@ -2,18 +2,21 @@ package BinarySearchTree;
 
 public class BstTree {
 
-	Node root;
+	private Node root;
 
+	// Constructor
 	public BstTree(int data) {
 
 		this.root = new Node(data);
 	}
 
+	// Return the root of the tree
 	public Node getRoot() {
 
 		return this.root;
 	}
 
+	// Add a node to a tree
 	public void addNode(Node rootExplore, int data) {
 
 		if (rootExplore == null) {
@@ -41,6 +44,31 @@ public class BstTree {
 
 	}
 
+	// Return the max node from a tree
+	public int max()
+	{
+		Node current;
+		current = getRoot();
+		while (current.right != null)
+		{
+			current = current.right;
+		}
+		return (current.data);
+	}
+
+	// Return the min node from a tree
+	public int min()
+	{
+		Node current;
+		current = getRoot();
+		while (current.left != null)
+		{
+			current = current.left;
+		}
+		return (current.data);
+	}
+
+	// search for a node in the tree
 	public void search(Node rootExplore, int data) {
 
 		if (rootExplore == null) {
