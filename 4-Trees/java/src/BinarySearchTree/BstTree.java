@@ -59,13 +59,22 @@ public class BstTree {
 	// Return the min node from a tree
 	public int min()
 	{
-		Node current;
-		current = getRoot();
+		Node current = getRoot();
 		while (current.left != null)
 		{
 			current = current.left;
 		}
 		return (current.data);
+	}
+
+	// Return the height of the bst tree
+	public int height()
+	{
+		Node current = getRoot();
+		if (current == null)
+			return (-1);
+
+		return Math.max(height(current.left), current.right) + 1;
 	}
 
 	// search for a node in the tree
