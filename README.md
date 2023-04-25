@@ -79,6 +79,7 @@ In this repo we are gonna see the BST or Binary Search Tree, is type of trees, b
 - **max** - finds the maximum node in the tree.
 - **min** - finds the minimum node in tree.
 - **height** - finds the height of the tree.
+- **levelOrder** - prints the tree in level-order.
 - **delete** - Delete a node from a tree. *(The hardest)*
 
 ##### Binary Tree Traversal
@@ -87,7 +88,6 @@ In computer science, tree traversal (also known as tree search and walking the t
 ###### Breadth-first Search
 In breadth-first search (BFS) or level-order search, the search tree is broadened as much as possible before going to the next depth.
 
-- **levelOrder** - prints the tree in level-order.
 - *Level-order: H, D, L, B, F, J, N, A, C, E, G, I, K, M, O*.
 
 ![breadth-first](./media/binary-search-tree-14-638-1786074081.jpeg)
