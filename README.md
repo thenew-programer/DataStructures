@@ -76,4 +76,16 @@ In this repo we are gonna see the BST or Binary Search Tree, is type of trees, b
 ### Basic Operations
 - **addNode** - Add a node to the tree.
 - **search** - Search for a node in the tree.
-- **delete** - Delete a node from a tree.*(The hardest)*
+- **max** - finds the maximum node in the tree.
+- **min** - finds the minimum node in tree.
+- **height** - finds the height of the tree.
+- **delete** - Delete a node from a tree. *(The hardest)*
+##### Binary Tree Traversal
+
+
+###### Breadth first
+- **Level Order Traversal**
+###### Depth first
+- **Preorder**
+- **Inorder**
+- **Postorder**
