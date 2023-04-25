@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stack>
+#include <queue>
 #include <algorithm>
 
 /**
@@ -45,6 +46,9 @@ public:
 
 	/* height - return the height of the tree*/
 	int height();
+
+	/* levelOrder - print a list in a level order traversal*/
+	void levelOrder();
 
 	/* Destructor*/
 	~BstTree();

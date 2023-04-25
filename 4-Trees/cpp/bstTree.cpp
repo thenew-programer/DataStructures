@@ -121,12 +121,39 @@ int BstTree::height()
 
 	while (currentR->right || currentL->left)
 	{
-		currentR = currentR->right;
-		currentL = currentL->left;
+		if (currentR->right)
+			currentR = currentR->right;
+
+		if (currentL->left)
+			currentL = currentL->left;
+
 		height++;
 	}
 
 	return (height);
+}
+/**
+ * levelOrder - print all the tree in level-order traversal
+ * Return: Nothing
+ */
+void BstTree::levelOrder()
+{
+	Node * current;
+	current = getRoot();
+	std::queue<Node *> Q;
+	Q.push(current);
+
+	while (!Q.empty())
+	{
+		current = Q.front();
+		std::cout << current->data<<" ";
+
+		if (current->left) Q.push(current->left);
+		if (current->right) Q.push(current->right);
+		Q.pop(); // remove the element in the front of the queue
+	}
+	std::cout << std::endl;
+
 }
 
 /**
@@ -137,25 +164,18 @@ int BstTree::height()
  */
 void BstTree::deleteTree(Node * Explorer)
 {
-	std::stack<Node *> s;
-	Node * current, * temp;
-	current = Explorer;
-	while (!s.empty() || !current)
-	{
-		if (current == NULL)
-		{
-			s.push(current);
-			current = current->left;
-		}
-		else {
-			current = s.top();
-			s.pop();
-			temp = current;
-			current = current->right;
-			delete current;
-		}
-	}
+	Node * current;
+	std::queue<Node *> Q;
+	Q.push(Explorer);
 
+	while (!Q.empty())
+	{
+		current = Q.front();
+		if (current->left) Q.push(current->left);
+		if (current->right) Q.push(current->right);
+		delete current;
+		Q.pop();
+	}
 }
 
 /**
@@ -164,5 +184,5 @@ void BstTree::deleteTree(Node * Explorer)
 */
 BstTree::~BstTree()
 {
-	deleteTree(this->root);
+	deleteTree(getRoot());
 }
