@@ -70,11 +70,18 @@ public class BstTree {
 	// Return the height of the bst tree
 	public int height()
 	{
-		Node current = getRoot();
-		if (current == null)
-			return (-1);
+		Node currentR = getRoot();
+		Node currentL = getRoot();
+		int height = 0;
 
-		return Math.max(height(current.left), current.right) + 1;
+		while (currentR.right != null || currentL.left != null)
+		{
+			currentR = currentR.right;
+			currentL = currentL.left;
+			height++;
+		}
+
+		return (height);
 	}
 
 	// search for a node in the tree
