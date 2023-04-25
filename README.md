@@ -88,9 +88,9 @@ In computer science, tree traversal (also known as tree search and walking the t
 In breadth-first search (BFS) or level-order search, the search tree is broadened as much as possible before going to the next depth.
 
 - **levelOrder** - prints the tree in level-order.
-*Level-order: F, B, G, A, D, I, C, E, H.*
-![breadth-first](./media/breadth-first_traversal.svg.png)
+- *Level-order: H, D, L, B, F, J, N, A, C, E, G, I, K, M, O*.
 
+![breadth-first](./media/binary-search-tree-14-638-1786074081.jpeg)
 ###### Depth first
 - **Preorder**
 - **Inorder**
