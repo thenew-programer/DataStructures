@@ -80,11 +80,17 @@ In this repo we are gonna see the BST or Binary Search Tree, is type of trees, b
 - **min** - finds the minimum node in tree.
 - **height** - finds the height of the tree.
 - **delete** - Delete a node from a tree. *(The hardest)*
+
 ##### Binary Tree Traversal
+In computer science, tree traversal (also known as tree search and walking the tree) is a form of graph traversal and refers to the process of visiting (e.g. retrieving, updating, or deleting) each node in a tree data structure, exactly once. Such traversals are classified by the order in which the nodes are visited. The following algorithms are described for a binary tree, but they may be generalized to other trees as well. 
 
+###### Breadth-first Search
+In breadth-first search (BFS) or level-order search, the search tree is broadened as much as possible before going to the next depth.
 
-###### Breadth first
-- **Level Order Traversal**
+- **levelOrder** - prints the tree in level-order.
+*Level-order: F, B, G, A, D, I, C, E, H.*
+![breadth-first](./media/breadth-first_traversal.svg.png)
+
 ###### Depth first
 - **Preorder**
 - **Inorder**
