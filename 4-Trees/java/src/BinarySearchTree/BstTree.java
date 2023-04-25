@@ -1,5 +1,8 @@
 package BinarySearchTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BstTree {
 
 	private Node root;
@@ -76,12 +79,33 @@ public class BstTree {
 
 		while (currentR.right != null || currentL.left != null)
 		{
-			currentR = currentR.right;
-			currentL = currentL.left;
+			if (currentR.right != null)
+				currentR = currentR.right;
+
+			if (currentL.left != null)
+				currentL = currentL.left;
+
 			height++;
 		}
 
 		return (height);
+	}
+
+	// levelOrder - print the tree in level-order traversal
+	public void levelOrder() {
+
+		Queue<Node> Q = new LinkedList<Node>();
+
+		Q.add(getRoot());
+		while (!Q.isEmpty())
+		{
+			Node current = Q.peek();
+			System.out.print(current.data + " ");
+			if (current.left != null) Q.add(current.left); 
+			if (current.right != null) Q.add(current.right);
+			Q.poll();
+		}
+		System.out.println("");
 	}
 
 	// search for a node in the tree

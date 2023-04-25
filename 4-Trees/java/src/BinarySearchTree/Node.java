@@ -7,9 +7,9 @@ public class Node {
 	Node right = null;
 
 	public Node(int data) {
-
-		// Initialize the Node
 		this.data = data;
+		this.left = null;
+		this.right = null;
 	}
 }
 
