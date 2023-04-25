@@ -17,12 +17,12 @@ struct Node {
 };
 
 class BstTree {
-private:
 	/* Root of the Tree*/
 	Node * root;
 
 	/* Delete the Node*/
 	void deleteTree(Node *);
+
 public:
 	/* Constructor */
 	BstTree(int);
@@ -35,6 +35,12 @@ public:
 
 	/* Search for a node*/
 	void search(int, Node *);
+
+	/* Max - find the max value in tree*/
+	int max();
+
+	/* Min - find the min value in tree*/
+	int min();
 
 	/* Destructor*/
 	~BstTree();

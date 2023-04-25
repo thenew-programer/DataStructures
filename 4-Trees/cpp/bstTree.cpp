@@ -24,27 +24,27 @@ Node * BstTree::getRoot()
  * @rootExplorer: pointer to the root node
  * Return: Nothing
  */
-void BstTree::addNode(int data, Node * rootExplorer)
+void BstTree::addNode(int data, Node * current)
 {
 	Node * newNode = new Node;
 	newNode->data = data;
-	if (rootExplorer->data >= data)
+	if (current->data >= data)
 	{
-		if (rootExplorer->left == NULL)
+		if (current->left == NULL)
 		{
-			rootExplorer->left = newNode;
+			current->left = newNode;
 			return;
 		}
-		addNode(data, rootExplorer->left);
+		addNode(data, current->left);
 	}
-	if (rootExplorer->data < data)
+	if (current->data < data)
 	{
-		if (rootExplorer->right == NULL)
+		if (current->right == NULL)
 		{
-			rootExplorer->right = newNode;
+			current->right = newNode;
 			return;
 		}
-		addNode(data, rootExplorer->right);
+		addNode(data, current->right);
 	}
 }
 
@@ -55,25 +55,55 @@ void BstTree::addNode(int data, Node * rootExplorer)
  * Return: 0 if the value Not found
  *         data in the node if founded
  */
-void BstTree::search(int data, Node * rootExplorer)
+void BstTree::search(int data, Node * current)
 {
-	if (!rootExplorer)
+	if (!current)
 	{
 		std::cout << "Value Not Found.\n";
 		return;
 	}
 
-	if (rootExplorer->data == data)
+	if (current->data == data)
 	{
 		std::cout << "Value Founded.\n";
 		return;
 	}
 
-	if (rootExplorer->data > data)
-		search(data, rootExplorer->left);
+	if (current->data > data)
+		search(data, current->left);
 	else
-		search(data, rootExplorer->right);
+		search(data, current->right);
 
+}
+
+/**
+ * max - find the max node.
+ * Return: the max node.
+ */
+int BstTree::max()
+{
+	Node * current;
+	current = this->root;
+	while (current->right)
+	{
+		current = current->right;
+	}
+	return (current->data);
+}
+
+/**
+ * min - find the min node.
+ * Return: the min node.
+ */
+int BstTree::min()
+{
+	Node * current;
+	current = this->root;
+	while (current->left)
+	{
+		current = current->left;
+	}
+	return (current->data);
 }
 
 /**
@@ -82,11 +112,11 @@ void BstTree::search(int data, Node * rootExplorer)
  * @rootExplorer: pointer to root Node
  * Return: Noting
  */
-void BstTree::deleteTree(Node * rootExplorer)
+void BstTree::deleteTree(Node * Explorer)
 {
 	std::stack<Node *> s;
 	Node * current, * temp;
-	current = rootExplorer;
+	current = Explorer;
 	while (!s.empty() || !current)
 	{
 		if (current == NULL)
