@@ -83,7 +83,7 @@ void BstTree::search(int data, Node * current)
 int BstTree::max()
 {
 	Node * current;
-	current = this->root;
+	current = getRoot();
 	while (current->right)
 	{
 		current = current->right;
@@ -98,12 +98,35 @@ int BstTree::max()
 int BstTree::min()
 {
 	Node * current;
-	current = this->root;
+	current = getRoot();
 	while (current->left)
 	{
 		current = current->left;
 	}
 	return (current->data);
+}
+
+/**
+ * height - find the height of a treee
+ * Return: the height.
+ */
+int BstTree::height()
+{
+	Node * currentL, * currentR;
+	int height;
+
+	height = 0;
+	currentL = getRoot();
+	currentR = getRoot();
+
+	while (currentR->right || currentL->left)
+	{
+		currentR = currentR->right;
+		currentL = currentL->left;
+		height++;
+	}
+
+	return (height);
 }
 
 /**

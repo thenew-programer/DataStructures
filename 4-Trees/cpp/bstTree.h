@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stack>
+#include <algorithm>
 
 /**
  * Node - struct containing the node preferences
@@ -41,6 +42,9 @@ public:
 
 	/* Min - find the min value in tree*/
 	int min();
+
+	/* height - return the height of the tree*/
+	int height();
 
 	/* Destructor*/
 	~BstTree();
