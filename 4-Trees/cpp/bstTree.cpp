@@ -164,18 +164,10 @@ void BstTree::levelOrder()
  */
 void BstTree::deleteTree(Node * Explorer)
 {
-	Node * current;
-	std::queue<Node *> Q;
-	Q.push(Explorer);
-
-	while (!Q.empty())
-	{
-		current = Q.front();
-		if (current->left) Q.push(current->left);
-		if (current->right) Q.push(current->right);
-		delete current;
-		Q.pop();
-	}
+	if (!Explorer) return;
+	deleteTree(Explorer->left);
+	deleteTree(Explorer->right);
+	delete Explorer;
 }
 
 /**
