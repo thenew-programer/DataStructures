@@ -63,12 +63,9 @@ Node * Insert(Node * head, int index, int value)
 
 int get(Node * head, int index, int fail)
 {
-    int value;
     Node * curr = head;
-    Node * temp = head;
-    for (int i = 0; (i <= index) && (curr != NULL); i++)
+    for (int i = 0; (i < index) && (curr != NULL); i++)
     {
-        temp = curr;
         curr = curr->next;
     }
     if (curr == NULL)
@@ -77,8 +74,7 @@ int get(Node * head, int index, int fail)
     }
     else
     {
-        value = temp->data;
-        return value;
+        return curr->data;
     }
 }
 
@@ -144,6 +140,7 @@ void Print(Node * head)
 
 void Free(Node * head)
 {
+    Node * first = head;
     Node * temp = NULL;
     while (head != NULL)
     {
@@ -151,4 +148,5 @@ void Free(Node * head)
         free(head);
         head = temp;
     }
+    free(first);
 }

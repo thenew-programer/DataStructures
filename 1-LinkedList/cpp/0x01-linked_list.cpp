@@ -70,21 +70,15 @@ void List::Insert(int value, int index)
 int List::get(int index, int fail)
 {
     int value;
-    curr = temp = head;
-    for (int i = 0; (i < index - 1) && (curr != NULL); i++)
-    {
-        temp = curr;
+    curr = head;
+
+    for (int i = 0; (i < index) && (curr != NULL); i++)
         curr = curr->next;
-    }
+
     if (curr == NULL)
-    {
         return fail;
-    }
     else
-    {
-        value = temp->data;
-        return value;
-    }
+        return curr->data;
 }
 
 
@@ -134,11 +128,11 @@ void List::Print() {
 }
 
 void List::~List() {
+    curr = head;
     while (head != NULL) {
         temp = head;
         head = head->next;
         delete temp;
     }
+    delete curr;
 }
-
-
